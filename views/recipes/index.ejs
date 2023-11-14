@@ -1,22 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+<% layout('layouts/boilerplate')%>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipes</title>
-</head>
-
-<body>
-    <h1>All Recipes</h1>
-    <div>
-        <a href="/recipes/new">Add Recipe</a>
-    </div>
-    <ul>
-        <% for(let recipe of recipes){%>
-            <li><a href="/recipes/<%=recipe._id %>"><%= recipe.title %></a></li>
-            <% }%>
-    </ul>
-</body>
-
-</html>
+<h1>All Recipes</h1>
+<div>
+    <a href="/recipes/new">Add Recipe</a>
+</div>
+<ul>
+    <% for(let recipe of recipes){%>
+        <div class="card" mb-3>
+            <div class="row">
+                <div class="col-md-4">
+                    <img class="img-fluid" src="<%= recipe.image%>" alt="">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h1 class="card-title"><%=recipe.name%></h1>
+                        <p class="card-text"><%=recipe.ingredient%></p>
+                        <p class="card-text">
+                            <small class="text-muted"><%=recipe.discription%></small>
+                        </p>
+                        <a class="btn btn-primary" href="/recipes/<%=recipe._id%>">View <%=recipe.name%></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <% }%>
+</ul>

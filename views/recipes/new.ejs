@@ -1,15 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Recipe</title>
-</head>
-<body>
+<% layout('layouts/boilerplate')%>
+
     <form action="/recipes" method="POST">
         <div>
-            <label for="rank">Rank</label>
-            <input type="text" id="rank" name="recipe[rank]">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="recipe[name]">
         </div>
         <div>
             <label for="title">Title</label>
@@ -18,5 +12,3 @@
         <button>Add Recipe</button>
     </form>
     <a href="/recipes">All Recipes</a>
-</body>
-</html>

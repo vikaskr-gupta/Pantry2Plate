@@ -3,10 +3,12 @@ const Schema = mongoose.Schema;
 
 const RecipeSchema = new Schema({
     rank: String,
-    title: String,
+    name: String,
     ingredient: String,
     formula: String,
-    discription: String
+    // image: String,
+    discription: String,
+    title: String
 });
 
 module.exports = mongoose.model('Recipe', RecipeSchema);

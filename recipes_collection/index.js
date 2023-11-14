@@ -19,7 +19,15 @@ const recipeDB = async() => {
     await Recipe.deleteMany({});
     for(let i=0; i< 15; i++){
         const reci = new Recipe({
-            rank : `${details[i].rank}, ${details[i].title}, ${details[i].ingredient}, ${details[i].formula}, ${details[i].discription}`,
+            //Callinng from same file
+            rank : `${details[i].rank}`, 
+            name: `${details[i].name}`,
+            ingredient: `${details[i].ingredient}`, 
+            formula: `${details[i].formula}`, 
+            //for later use
+            // image: `${details[i].image}`,
+            discription: `${details[i].discription}`,
+            // Calling from other js file
             title: `${descriptors[i]} - ${places[i]}`
         })
         await reci.save();
