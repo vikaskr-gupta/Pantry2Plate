@@ -1,14 +1,56 @@
 <% layout('layouts/boilerplate')%>
 
-    <form action="/recipes" method="POST">
-        <div>
-            <label for="name">Name</label>
-            <input type="text" id="name" name="recipe[name]">
+    <div class="row">
+        <h1 class="text-center">New Recipe</h1>
+        <div class="col-6 offset-3">
+            <form action="/recipes" method="POST" novalidate class="validated-form">
+                <div class="mb-3">
+                    <label class="form-label" for="name">Name</label>
+                    <input class="form-control" type="text" id="name" name="recipe[name]" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="title">Title</label>
+                    <input class="form-control" type="text" id="title" name="recipe[title]" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="image">Image URL</label>
+                    <input class="form-control" type="text" id="image" name="recipe[image]" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="formula">Formula</label>
+                    <input class="form-control" type="text" id="formula" name="recipe[formula]" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="ingredient">Ingredients</label>
+                    <input class="form-control" type="text" id="ingredient" name="recipe[ingredient]" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="description">Description</label>
+                    <textarea class="form-control" type="text" id="description" name="recipe[description]" required>
+                    </textarea>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <button class="btn btn-success">Add Recipe</button>
+                </div>
+            </form>
+            <a href="/recipes">All Recipes</a>
         </div>
-        <div>
-            <label for="title">Title</label>
-            <input type="text" id="title" name="recipe[title]">
-        </div>
-        <button>Add Recipe</button>
-    </form>
-    <a href="/recipes">All Recipes</a>
+    </div>

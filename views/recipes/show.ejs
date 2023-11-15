@@ -1,28 +1,40 @@
 <% layout('layouts/boilerplate')%>
 
-    <h1>
-        <%= recipe.name %>
-    </h1>
-
-    <h2>
-        <%= recipe.title %>
-    </h2>
-
-    <!-- <img src="<%=recipe.image%>" alt="">
-
-    <p>
-        <%= recipe.discription %>
-    </p> -->
-
-    <p>
-        <a href="/recipes/<%=recipe._id%>/edit">Edit</a>
-    </p>
-
-    <p>
-        <form action="/recipes/<%=recipe._id%>?_method=DELETE" method="POST">
-            <button>Delete</button>
-        </form>
-    </p>
+    <div class="row">
+        <div class="col-6 offset-3">
+            <div class="card mb-3" style="width: 18rem;">
+                <img src="<%= recipe.image %>" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <%= recipe.name %>
+                    </h5>
+                    <h6 class="card-title">
+                        <%= recipe.title %>
+                    </h6>
+                    <p class="card-text">
+                        <%= recipe.description %>
+                    </p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item text-muted">
+                        <%= recipe.formula %>
+                    </li>
+                    <li class="list-group-item">
+                        <%= recipe.ingredient %>
+                    </li>
+                </ul>
+                <div class="card-body">
+                    <a class="card-link btn btn-info" href="/recipes/<%=recipe._id%>/edit">Edit</a>
+                    <form class="d-inline" action="/recipes/<%=recipe._id%>?_method=DELETE" method="POST">
+                        <button class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
+                <div class="card-footer text-muted">
+                    2 days ago
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <a href="/recipes">All Recipes</a>

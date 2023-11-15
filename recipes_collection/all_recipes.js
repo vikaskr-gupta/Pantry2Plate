@@ -1,122 +1,107 @@
 module.exports = [
     {
-        rank: "1",
         name: "New York",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-XkySihon_1vO738aeah1NEASxQ07vLTee1P6cJ_MlVfaokghr5OoJH02Er3-DIa3Nck&usqp=CAU",
+        formula: "4.8%",
         ingredient: "New York",
-        formula: "4.8%",
-        // image: url
-        discription: "8405837"
+        description: "8405837"
     },
     {
-        rank: "2",
         name: "Los Angeles",
-        ingredient: "California",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-XkySihon_1vO738aeah1NEASxQ07vLTee1P6cJ_MlVfaokghr5OoJH02Er3-DIa3Nck&usqp=CAU",
         formula: "4.8%",
-        // image: url
-        discription: "3884307"
+        ingredient: "California",
+        description: "3884307"
     },
     {
-        rank: "3",
         name: "Chicago",
-        ingredient: "Illinois",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-XkySihon_1vO738aeah1NEASxQ07vLTee1P6cJ_MlVfaokghr5OoJH02Er3-DIa3Nck&usqp=CAU",
         formula: "-6.1%",
-        // image: url,
-        discription: "2718782"
+        ingredient: "Illinois",
+        description: "2718782"
     },
     {
-        rank: "4",
         name: "Houston",
-        ingredient: "Texas",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-XkySihon_1vO738aeah1NEASxQ07vLTee1P6cJ_MlVfaokghr5OoJH02Er3-DIa3Nck&usqp=CAU",
         formula: "11.0%",
-        // image: url,
-        discription: "2195914"
+        ingredient: "Texas",
+        description: "2195914"
     },
     {
-        rank: "5",
         name: "Philadelphia",
-        ingredient: "Pennsylvania",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-XkySihon_1vO738aeah1NEASxQ07vLTee1P6cJ_MlVfaokghr5OoJH02Er3-DIa3Nck&usqp=CAU",
         formula: "2.6%",
-        // image: url
-        discription: "1553165"
+        ingredient: "Pennsylvania",
+        description: "1553165"
     },
     {
-        rank: "6",
         name: "Phoenix",
-        ingredient: "Arizona",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-XkySihon_1vO738aeah1NEASxQ07vLTee1P6cJ_MlVfaokghr5OoJH02Er3-DIa3Nck&usqp=CAU",
         formula: "14.0%",
-        // image: url,
-        discription: "1513367"
+        ingredient: "Arizona",
+        description: "1513367"
     },
     {
-        rank: "7",
         name: "San Antonio",
-        ingredient: "Texas",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-XkySihon_1vO738aeah1NEASxQ07vLTee1P6cJ_MlVfaokghr5OoJH02Er3-DIa3Nck&usqp=CAU",
         formula: "21.0%",
-        // image: url,
-        discription: "1409019"
+        ingredient: "Texas",
+        description: "1409019"
     },
     {
-        rank: "8",
         name: "San Diego",
-        ingredient: "California",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-XkySihon_1vO738aeah1NEASxQ07vLTee1P6cJ_MlVfaokghr5OoJH02Er3-DIa3Nck&usqp=CAU",
         formula: "10.5%",
-        // image: url,
-        discription: "1355896"
+        ingredient: "California",
+        description: "1355896"
     },
     {
-        rank: "9",
         name: "Dallas",
-        ingredient: "Texas",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-XkySihon_1vO738aeah1NEASxQ07vLTee1P6cJ_MlVfaokghr5OoJH02Er3-DIa3Nck&usqp=CAU",
         formula: "5.6%",
-        // image: url
-        discription: "1257676"
-    },
-    {
-        rank: "10",
-        name: "San Jose",
-        ingredient: "California",
-        formula: "10.5%",
-        // image: url,
-        discription: "998537"
-    },
-    {
-        rank: "11",
-        name: "Austin",
         ingredient: "Texas",
-        formula: "31.7%",
-        // image: url,
-        discription: "885400"
+        description: "1257676"
     },
     {
-        rank: "12",
-        name: "Indianapolis",
-        ingredient: "Indiana",
-        formula: "7.8%",
-        // image: url
-        discription: "843393"
-    },
-    {
-        rank: "13",
-        name: "Jacksonville",
-        ingredient: "Florida",
-        formula: "14.3%",
-        // image: url,
-        discription: "842583"
-    },
-    {
-        rank: "14",
-        name: "San Francisco",
+        name: "San Jose",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-XkySihon_1vO738aeah1NEASxQ07vLTee1P6cJ_MlVfaokghr5OoJH02Er3-DIa3Nck&usqp=CAU",
+        formula: "10.5%",
         ingredient: "California",
-        formula: "7.7%",
-        // image: url
-        discription: "837442"
+        description: "998537"
     },
     {
-        rank: "15",
+        name: "Austin",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-XkySihon_1vO738aeah1NEASxQ07vLTee1P6cJ_MlVfaokghr5OoJH02Er3-DIa3Nck&usqp=CAU",
+        formula: "31.7%",
+        ingredient: "Texas",
+        description: "885400"
+    },
+    {
+        name: "Indianapolis",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-XkySihon_1vO738aeah1NEASxQ07vLTee1P6cJ_MlVfaokghr5OoJH02Er3-DIa3Nck&usqp=CAU",
+        formula: "7.8%",
+        ingredient: "Indiana",
+        description: "843393"
+    },
+    {
+        name: "Jacksonville",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-XkySihon_1vO738aeah1NEASxQ07vLTee1P6cJ_MlVfaokghr5OoJH02Er3-DIa3Nck&usqp=CAU",
+        formula: "14.3%",
+        ingredient: "Florida",
+        description: "842583"
+    },
+    {
+        name: "San Francisco",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-XkySihon_1vO738aeah1NEASxQ07vLTee1P6cJ_MlVfaokghr5OoJH02Er3-DIa3Nck&usqp=CAU",
+        formula: "7.7%",
+        ingredient: "California",
+        description: "837442"
+    },
+    {
         name: "Columbus",
-        ingredient: "Ohio",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-XkySihon_1vO738aeah1NEASxQ07vLTee1P6cJ_MlVfaokghr5OoJH02Er3-DIa3Nck&usqp=CAU",
         formula: "14.8%",
-        // image: url,
-        discription: "822553"
+        ingredient: "Ohio",
+        description: "822553"
     }
 ]
