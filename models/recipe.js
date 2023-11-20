@@ -6,8 +6,14 @@ const RecipeSchema = new Schema({
     title: String,
     image: String,
     formula: String,
-    ingredient: String,
-    description: String
+    ingredient_1: String,
+    ingredient_2: String,
+    ingredient_3: String,
+    ingredient_4: String,
+    ingredient_5: String,
+    ingredient_6: String,
+    ingredient_7: String,
+    description: Number
 });
 
 module.exports = mongoose.model('Recipe', RecipeSchema);

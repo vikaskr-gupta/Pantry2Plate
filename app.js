@@ -1,15 +1,26 @@
+//Install express
 const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
+// Install ejs-mate
 const ejsMate = require('ejs-mate');
+// Install express-session
+const session = require('express-session');
+//Install connect-flash --- success and error comment
+const flash = require('connect-flash');
+const expressError = require('./utils/expressError');
+//Install method-override
 const methodOverride = require('method-override');
-const Recipe = require('./models/recipe');
+const recipes = require('./routes/recipes');
+// Install passport
+const passport = require('passport');
+// Install passport-local
+const localStrategy = require('passport-local');
+const User = require('./models/user');
 
-// import express, { urlencoded } from 'express';
-// import { join } from 'path';
-// import { connect, connection } from 'mongoose';
-// import methodOverride from 'method-override';
-// import Recipe, { find, findById, findByIdAndUpdate, findByIdAndDelete } from './models/recipe';
+//users folder --- for Register form
+const userRoutes = require('./routes/users');
+const recipeRoutes = require('./routes/recipes');
 
 
 
@@ -27,7 +38,7 @@ db.once("open", () => {
 
 const app = express();
 
-
+//ejs
 app.engine('ejs', ejsMate)
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
@@ -35,7 +46,46 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
+app.use(express.static(path.join(__dirname, 'public')))
 
+
+// express-session
+const sessionConfig = {
+    secret: 'thisshouldbebettersecret!',
+    resave: false,
+    saveUninitialized: true,
+    cookie: {
+        httpOnly: true,
+        expires: Date.now() + 1000 * 60 * 60 * 24 * 7,
+        maxAge: 1000 * 60 * 60 * 24 * 7
+    }
+}
+app.use(session(sessionConfig))
+
+// connect-flash
+app.use(flash());
+
+// passport
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new localStrategy(User.authenticate()));
+
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+app.use((req, res, next) => {
+    console.log(req.session)
+    res.locals.currentUser = req.user;  //For current user
+    res.locals.success = req.flash('success');
+    res.locals.error = req.flash('error');
+    next();
+})
+
+app.use('/', userRoutes);
+app.use('/recipes', recipeRoutes)
+// app.use('/recipes/:id/reviews', recipeRoutes)
+
+app.use('/recipes', recipes)
 
 
 //HOME
@@ -43,51 +93,20 @@ app.get('/', (req, res) => {
     res.render('home');
 })
 
-//ALL RECIPES
-app.get('/recipes', async (req, res) => {
-    const recipes = await Recipe.find({});
-    res.render('recipes/index', {recipes});
-})
 
-//NEW
-app.get('/recipes/new', (req, res) => {
-    res.render('recipes/new');
-})
-app.post('/recipes', async (req, res) => {
-    const recipe = new Recipe(req.body.recipe);
-    await recipe.save();
-    res.redirect(`/recipes/${recipe._id}`)
-})
-
-//SHOW RECIPE
-app.get('/recipes/:id', async (req, res) => {
-    const recipe = await Recipe.findById(req.params.id)
-    res.render('recipes/show', {recipe});
-})
-
-//EDIT
-app.get('/recipes/:id/edit', async (req, res) => {
-    const recipe = await Recipe.findById(req.params.id)
-    res.render('recipes/edit', {recipe});
+//MORE ERRORS
+app.all('*', (req, res, next) => {
+    next(new expressError('Page Not Found', 404));
 })
 
 
-
-//UPDATE
-app.put('/recipes/:id', async (req, res) => {
-    const { id } = req.params;
-    const recipe = await Recipe.findByIdAndUpdate(id,{ ...req.body.recipe })
-    res.redirect(`/recipes/${recipe._id}`)
-});
-
-
-
-//DELETE
-app.delete('/recipes/:id', async (req, res) => {
-    const { id } = req.params;
-    await Recipe.findByIdAndDelete(id);
-    res.redirect('/recipes');
+//ERROR Handling
+app.use((err, req, res, next) => {
+    const { statusCode = 500 } = err;
+    if(!err.message) err.message = 'Oh no, Somthing went wrong!'
+    res.status(statusCode).render('error', { err });
 })
+
 
 //LISTEN
 app.listen(3000, () => {
