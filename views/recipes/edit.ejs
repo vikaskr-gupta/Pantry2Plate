@@ -13,8 +13,8 @@
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label" for="title">Title</label>
-                    <input class="form-control" type="text" id="title" name="recipe[title]" value="<%=recipe.title%>"
+                    <label class="form-label" for="time">Time</label>
+                    <input class="form-control" type="text" id="time" name="recipe[time]" value="<%=recipe.time%>"
                         required>
                     <div class="valid-feedback">
                         Looks good!
@@ -29,57 +29,50 @@
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label" for="formula">Formula</label>
-                    <input class="form-control" type="text" id="formula" name="recipe[formula]"
-                        value="<%=recipe.formula%>" required>
+                    <label class="form-label" for="method">Method</label>
+                    <input class="form-control" type="text" id="method" name="recipe[method]" value="<%=recipe.method%>" 
+                        required>
                     <div class="valid-feedback">
                         Looks good!
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label" for="ingredient_1">Ingredients</label>
-                    <input class="form-control" type="text" id="ingredient_1" name="recipe[ingredient_1]"
-                        value="<%=recipe.ingredient_1%>" required>
-                    <div class="valid-feedback">
-                        Looks good!
-                    </div>
+                    <label class="form-label" for="ingredient">Ingredients</label>
+                    <textarea class="form-control" type="text" id="ingredient" name="recipe[ingredient]" required>
+                        <%=recipe.ingredient%>
+                    </textarea>
                 </div>
-                <div class="mb-3">
-                    <label class="form-label" for="ingredient_2">Ingredients</label>
+                
+                <!-- <div class="mb-3">
+                    <label class="form-label" for="ingredient_2">Ingredients 2</label>
                     <input class="form-control" type="text" id="ingredient_2" name="recipe[ingredient_2]"
                         value="<%=recipe.ingredient_2%>" required>
-                    <div class="valid-feedback">
-                        Looks good!
-                    </div>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label" for="ingredient_3">Ingredients</label>
+                    <label class="form-label" for="ingredient_3">Ingredients 3</label>
                     <input class="form-control" type="text" id="ingredient_3" name="recipe[ingredient_3]"
                         value="<%=recipe.ingredient_3%>" required>
-                    <div class="valid-feedback">
-                        Looks good!
-                    </div>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label" for="ingredient_4">Ingredients</label>
+                    <label class="form-label" for="ingredient_4">Ingredients 4</label>
                     <input class="form-control" type="text" id="ingredient_4" name="recipe[ingredient_4]"
-                        value="<%=recipe.ingredient_4%>">
+                        value="<%=recipe.ingredient_4%>" required>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label" for="ingredient_5">Ingredients</label>
+                    <label class="form-label" for="ingredient_5">Ingredients 5</label>
                     <input class="form-control" type="text" id="ingredient_5" name="recipe[ingredient_5]"
-                        value="<%=recipe.ingredient_5%>" >
+                        value="<%=recipe.ingredient_5%>" required>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label" for="ingredient_6">Ingredients</label>
+                    <label class="form-label" for="ingredient_6">Ingredients 6</label>
                     <input class="form-control" type="text" id="ingredient_6" name="recipe[ingredient_6]"
-                        value="<%=recipe.ingredient_6%>">
+                        value="<%=recipe.ingredient_6%>" required>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label" for="ingredient_7">Ingredients</label>
+                    <label class="form-label" for="ingredient_7">Ingredients 7</label>
                     <input class="form-control" type="text" id="ingredient_7" name="recipe[ingredient_7]"
-                        value="<%=recipe.ingredient_7%>">
-                </div>
+                        value="<%=recipe.ingredient_7%>" required>
+                </div> -->
                 <div class="mb-3">
                     <label class="form-label" for="description">Description</label>
                     <textarea class="form-control" type="text" id="description" name="recipe[description]" required>
