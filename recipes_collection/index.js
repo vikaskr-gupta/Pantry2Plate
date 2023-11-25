@@ -26,12 +26,6 @@ const recipeDB = async() => {
             image: `${details[i].image}`,
             method: `${details[i].method}`, 
             ingredient: `${details[i].ingredient}`, 
-            // ingredient_2: `${details[i].ingredient_2}`, 
-            // ingredient_3: `${details[i].ingredient_3}`, 
-            // ingredient_4: `${details[i].ingredient_4}`, 
-            // ingredient_5: `${details[i].ingredient_5}`, 
-            // ingredient_6: `${details[i].ingredient_6}`, 
-            // ingredient_7: `${details[i].ingredient_7}`, 
             // image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-XkySihon_1vO738aeah1NEASxQ07vLTee1P6cJ_MlVfaokghr5OoJH02Er3-DIa3Nck&usqp=CAU",
             description: `${details[i].description}`
         })
