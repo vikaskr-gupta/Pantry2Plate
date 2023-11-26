@@ -24,6 +24,7 @@ router.get('/', catchAsync(async (req, res) => {
     res.render('recipes/index', {recipes});
 }))
 
+
 //NEW
 router.get('/new', isLoggedIn, (req, res) => {
     res.render('recipes/new');

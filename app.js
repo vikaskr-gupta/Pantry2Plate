@@ -93,6 +93,11 @@ app.get('/', (req, res) => {
     res.render('home');
 })
 
+//ABOUT US
+app.get('/aboutUs', (req, res) => {
+    res.render('aboutUs');
+})
+
 
 //MORE ERRORS
 app.all('*', (req, res, next) => {
