@@ -18,6 +18,8 @@ const passport = require('passport');
 const localStrategy = require('passport-local');
 const User = require('./models/user');
 
+
+
 //users folder --- for Register form
 const userRoutes = require('./routes/users');
 const recipeRoutes = require('./routes/recipes');
@@ -47,6 +49,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')))
+app.use('/static', express.static(path.join(__dirname, 'public')))
 
 
 // express-session
@@ -98,6 +101,8 @@ app.get('/aboutUs', (req, res) => {
     res.render('aboutUs');
 })
 
+//Images
+app.use("/images", express.static('images'))
 
 //MORE ERRORS
 app.all('*', (req, res, next) => {
