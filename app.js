@@ -17,6 +17,9 @@ const passport = require('passport');
 // Install passport-local
 const localStrategy = require('passport-local');
 const User = require('./models/user');
+// Searching...
+require("dotenv").config();
+const cors = require('cors');
 
 
 
@@ -49,7 +52,10 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')))
-app.use('/static', express.static(path.join(__dirname, 'public')))
+// app.use('/static', express.static(path.join(__dirname, 'public')))
+//Searching
+app.use(express.json());
+app.use(cors());
 
 
 // express-session

@@ -6,7 +6,13 @@ const RecipeSchema = new Schema({
     time: String,
     image: String,
     method: String,
-    ingredient: String,
+    // title: String,
+    // ingredients: String,
+    ingredient1: String,
+    ingredient2: String,
+    ingredient3: String,
+    ingredient4: String,
+    ingredient5: String,
     description: String
 });
 
