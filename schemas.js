@@ -6,12 +6,12 @@ module.exports.recipeSchema = Joi.object({
         time: Joi.string().required(),
         image: Joi.string().required(),
         method: Joi.string().required(),
-        // ingredients: Joi.string().required(),
-        ingredient1: Joi.string().required(),
-        ingredient2: Joi.string().required(),
-        ingredient3: Joi.string().required(),
-        ingredient4: Joi.string().allow(""),
-        ingredient5: Joi.string().allow(""),
+        ingredients: Joi.string().required(),
+        // ingredient1: Joi.string().required(),
+        // ingredient2: Joi.string().required(),
+        // ingredient3: Joi.string().required(),
+        // ingredient4: Joi.string().allow(""),
+        // ingredient5: Joi.string().allow(""),
         description: Joi.string().required(),
     }).required()
 });

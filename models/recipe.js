@@ -7,12 +7,12 @@ const RecipeSchema = new Schema({
     image: String,
     method: String,
     // title: String,
-    // ingredients: String,
-    ingredient1: String,
-    ingredient2: String,
-    ingredient3: String,
-    ingredient4: String,
-    ingredient5: String,
+    // ingredient1: String,
+    // ingredient2: String,
+    // ingredient3: String,
+    // ingredient4: String,
+    // ingredient5: String,
+    ingredients: String,
     description: String
 });
 

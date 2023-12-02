@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const details = require('./all_recipes');
 // const {places, descriptors} = require('./helper');
 // const {ingredient1, ingredient2, ingredient3} = require('./helper');
-const {ingredient1, ingredient2, ingredient3, ingredient4, ingredient5} = require('./helper');
+// const {ingredient1, ingredient2, ingredient3, ingredient4, ingredient5} = require('./helper');
 
 const Recipe = require('../models/recipe');
 
@@ -32,11 +32,12 @@ const recipeDB = async() => {
             method: `${details[i].method}`, 
             // title: `${descriptors[i]} - ${places[i]}`,
             // ingredients: `${ingredient1[i]}, ${ingredient2[i]}, ${ingredient3[i]}`,  
-            ingredient1: `${ingredient1[i]}`,
-            ingredient2: `${ingredient2[i]}`,
-            ingredient3: `${ingredient3[i]}`,
-            ingredient4: `${ingredient4[i]}`,
-            ingredient5: `${ingredient5[i]}`,
+            // ingredient1: `${ingredient1[i]}`,
+            // ingredient2: `${ingredient2[i]}`,
+            // ingredient3: `${ingredient3[i]}`,
+            // ingredient4: `${ingredient4[i]}`,
+            // ingredient5: `${ingredient5[i]}`,
+            ingredients: `${details[i].ingredients}`, 
             // image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-XkySihon_1vO738aeah1NEASxQ07vLTee1P6cJ_MlVfaokghr5OoJH02Er3-DIa3Nck&usqp=CAU",
             description: `${details[i].description}`
         })
