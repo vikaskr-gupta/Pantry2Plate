@@ -91,10 +91,11 @@ app.use((req, res, next) => {
 })
 
 app.use('/', userRoutes);
+app.use('/recipes', recipes)
 app.use('/recipes', recipeRoutes);
 // app.use('/recipes/:id/reviews', recipeRoutes);
-
-app.use('/recipes', recipes)
+//SEARCH 
+app.use("/api", recipeRoutes);
 
 
 //HOME
