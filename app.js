@@ -95,17 +95,12 @@ app.use('/recipes', recipes)
 app.use('/recipes', recipeRoutes);
 // app.use('/recipes/:id/reviews', recipeRoutes);
 //SEARCH 
-app.use("/api", recipeRoutes);
+app.use("/", recipeRoutes);
 
 
 //HOME
 app.get('/', (req, res) => {
     res.render('home');
-})
-
-//ABOUT US
-app.get('/aboutUs', (req, res) => {
-    res.render('aboutUs');
 })
 
 //Images
