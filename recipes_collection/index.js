@@ -38,7 +38,7 @@ const recipeDB = async() => {
             //Everything is callinng from same file except title
             name: `${details[i].name}`,
             time: `${details[i].time}`,
-            image: `${details[i].image}`,
+            img: `${details[i].img}`,
             method: `${details[i].method}`, 
             // title: `${descriptors[i]} - ${places[i]}`,
             // ingredients: `${ingredient1[i]}, ${ingredient2[i]}, ${ingredient3[i]}`,  
