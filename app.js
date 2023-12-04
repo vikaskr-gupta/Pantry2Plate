@@ -12,6 +12,7 @@ const expressError = require('./utils/expressError');
 //Install method-override
 const methodOverride = require('method-override');
 const recipes = require('./routes/recipes');
+const search = require('./routes/search');
 // Install passport
 const passport = require('passport');
 // Install passport-local
@@ -24,6 +25,7 @@ const cors = require('cors');
 
 
 //users folder --- for Register form
+const searchRoutes = require('./routes/search');
 const userRoutes = require('./routes/users');
 const recipeRoutes = require('./routes/recipes');
 
@@ -91,11 +93,16 @@ app.use((req, res, next) => {
 })
 
 app.use('/', userRoutes);
+
+app.use('/search', search)
+app.use("/", searchRoutes);
+app.use('/search', searchRoutes);
+
 app.use('/recipes', recipes)
-app.use('/recipes', recipeRoutes);
-// app.use('/recipes/:id/reviews', recipeRoutes);
-//SEARCH 
 app.use("/", recipeRoutes);
+app.use('/recipes', recipeRoutes);
+
+// app.use('/recipes/:id/reviews', recipeRoutes);
 
 
 //HOME
