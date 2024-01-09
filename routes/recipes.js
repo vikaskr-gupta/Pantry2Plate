@@ -26,9 +26,9 @@ router.get('/', catchAsync(async (req, res) => {
 
 
 //ABOUT US
-router.get('/aboutUs', (req, res) => {
-    res.render('aboutUs');
-})
+// router.get('/aboutUs', (req, res) => {
+//     res.render('aboutUs');
+// })
 
 
 //SEARCH

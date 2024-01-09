@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/search', (req, res) => {
-    res.render('http://localhost:3000');
+router.get('/aboutUs', (req, res) => {
+    res.render('aboutUs');
 })
 module.exports = router;
