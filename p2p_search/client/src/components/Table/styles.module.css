@@ -1,0 +1,101 @@
+.heading {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 60px;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	box-shadow: var(--box-shadow);
+	margin: 10px;
+	background-color: white;
+	border-radius: 4px;
+}
+
+.title_tab {
+	font-size: 16px;
+	font-weight: 600;
+	color: var(--black);
+	flex: 2;
+	text-align: left;
+	margin-left: 20px;
+}
+
+.ingredient_tab {
+	font-size: 16px;
+	font-weight: 600;
+	color: var(--black);
+	flex: 1;
+}
+
+.time_tab {
+	font-size: 16px;
+	font-weight: 600;
+	color: var(--black);
+	flex: 1;
+}
+
+.recipe {
+	display: flex;
+	align-items: center;
+	height: 70px;
+	margin: 5px 10px;
+	box-shadow: var(--box-shadow);
+	cursor: pointer;
+	transition: all 0.1s ease;
+	background-color: white;
+	border-radius: 4px;
+}
+
+.recipe:hover {
+	scale: 1.01;
+}
+
+.name_container {
+	flex: 2;
+	display: flex;
+	align-items: center;
+	object-fit: contain;
+}
+
+.recipe_img {
+	width: 40px;
+	height: 60px;
+	object-fit: contain;
+	margin: 0 10px;
+}
+
+.recipe_name {
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.ingredient_container {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.recipe_ingredient {
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.time_container {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.star_img {
+	width: 25px;
+	height: 25px;
+	margin-right: 4px;
+}
+
+.recipe_time {
+	font-size: 16px;
+	font-weight: 400;
+}

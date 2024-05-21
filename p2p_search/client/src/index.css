@@ -1,0 +1,23 @@
+body {
+	margin: 0;
+	color: var(--black);
+	background-color: #f2f2f2;
+}
+
+:root {
+	--black: #282828;
+	--blue: #0f6fde;
+	--box-shadow: 0px 3px 3px -2px rgb(0 0 0 / 20%),
+		0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%);
+}
+
+* {
+    font-family: 'EB Garamond', serif;
+    font-family: 'Lora', serif;
+    font-family: 'Playfair Display', serif;
+}
+
+.logo{
+    height: 45px;
+    width: 60px;
+}
